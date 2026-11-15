@@ -1,27 +1,28 @@
 # PulseOps
 
-Aplicación de demostración del flujo GitHub → Azure DevOps CI → artefacto → Azure DevOps CD → Azure App Service.
+Aplicación de demostración para GitHub → Azure DevOps CI → artefacto → Azure DevOps CD → Azure App Service.
 
-## Equipo y responsabilidades asignadas
+## Equipo
 
-| Integrante | GitHub | Área |
+| Integrante | GitHub | Responsabilidad |
 |---|---|---|
-| Carla (apellido por confirmar) | carlagiraldo09 | Frontend |
-| Samuel (apellido por confirmar) | samuelcuello05 | CI |
-| Carolina (apellido por confirmar) | caro-a21 | CD y Azure |
-| Daniel (apellido por confirmar) | Dazzlm | QA |
-| Tomás (apellido por confirmar) | tomasgonzalez0 | Arquitectura e integración |
+| Carla Juliana Giraldo Camacho | carlagiraldo09 | Frontend y aplicación |
+| Samuel (apellido pendiente) | samuelcuello05 | CI |
+| Carolina Arango Escobar | caro-a21 | CD y Azure |
+| Daniel Felipe Marin Marin | Dazzlm | QA |
+| Tomas Gonzalez Zapata | tomasgonzalez0 | Arquitectura e integración |
 
-Las contribuciones humanas y los nombres completos requieren verificación del equipo. Los cambios iniciales fueron preparados por Codex con la identidad Git configurada localmente.
+El equipo confirmó trabajo conjunto en un mismo PC. Los commits de cada rama llevan el nombre y correo del responsable indicado. Falta registrar revisiones humanas en los PRs y confirmar los nombres completos para la entrega.
 
-## Ejecución local
+## Aplicación local
 
-Node.js 22: `npm ci`, `npm test`, `npm start`. Visite `http://localhost:3000` y `http://localhost:3000/api/health`.
+Node.js 22, TypeScript, Express, HTML y CSS. Ejecutar `npm ci`, `npm test` y `npm start`. Abrir http://localhost:3000 y http://localhost:3000/api/health.
 
-## CI/CD
+## Arquitectura y despliegue
 
-`azure-pipelines.yml` ejecuta build y pruebas, publica `webapp-drop` y pasa ese artefacto a la etapa de despliegue. La configuración de Azure DevOps y la URL pública se documentarán cuando estén verificadas.
+`main` activa `azure-pipelines.yml`. CI instala dependencias desde lockfile, compila, prueba y publica `webapp-drop`. CD descarga exactamente ese artefacto y lo despliega en Azure App Service. Requiere registrar pipeline y configurar service connection. App Service creado: [pulseops-itm-2026](https://pulseops-itm-2026.azurewebsites.net) en plan F1; aún no contiene PulseOps verificado.
 
-## Evidencias y videos
+## Evidencias
 
-Véase `evidencias/README.md` y `docs/guiones-videos.md`. Los enlaces de ejecuciones y videos están pendientes de generar; no se presentan como realizados.
+[Acciones pendientes](docs/acciones-pendientes-github.md), [arquitectura](docs/arquitectura.md), [Azure](docs/configuracion-azure.md), [QA](docs/qa.md), [solución de problemas](docs/troubleshooting.md), [guiones de videos](docs/guiones-videos.md) y [evidencias](evidencias/README.md). Enlaces de ejecuciones y videos: pendientes. No se presentan como realizados.
+
