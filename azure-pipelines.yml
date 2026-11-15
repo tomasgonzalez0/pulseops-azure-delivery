@@ -5,7 +5,7 @@ trigger:
 pr: none
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ubuntu-22.04
 
 stages:
 - stage: CI
@@ -60,6 +60,7 @@ stages:
               curl --fail --silent --show-error --retry 8 --retry-delay 5 "https://pulseops-itm-2026.azurewebsites.net/api/health" | tee health.json
               grep -q '"status":"ok"' health.json
             displayName: Verify public health endpoint
+
 
 
 
