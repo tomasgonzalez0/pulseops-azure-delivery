@@ -35,3 +35,30 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)/pulseops.zip'
       artifact: webapp-drop
       displayName: Publish reusable artifact
+
+- stage: CD
+  displayName: Deploy published artifact
+  dependsOn: CI
+  condition: succeeded()
+  jobs:
+  - deployment: DeployWebApp
+    environment: pulseops-production
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: webapp-drop
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: 'PULSEOPS_AZURE_SERVICE_CONNECTION'
+              appType: 'webAppLinux'
+              appName: 'pulseops-itm-2026'
+              package: '$(Pipeline.Workspace)/webapp-drop/pulseops.zip'
+              runtimeStack: 'NODE|22-lts'
+          - script: |
+              curl --fail --silent --show-error --retry 8 --retry-delay 5 "https://pulseops-itm-2026.azurewebsites.net/api/health" | tee health.json
+              grep -q '"status":"ok"' health.json
+            displayName: Verify public health endpoint
+
+
