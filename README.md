@@ -6,11 +6,11 @@ Aplicación de demostración para GitHub → Azure DevOps CI → artefacto → A
 
 | Integrante | GitHub | Responsabilidad |
 |---|---|---|
-| Carla (apellido pendiente de confirmar en el equipo) | carlagiraldo09 | Frontend y aplicación |
+| Carla Juliana Giraldo Camacho | carlagiraldo09 | Frontend y aplicación |
 | Samuel (apellido pendiente) | samuelcuello05 | CI |
-| Carolina (apellido pendiente) | caro-a21 | CD y Azure |
-| Daniel (apellido pendiente) | Dazzlm | QA |
-| Tomás (apellido pendiente) | tomasgonzalez0 | Arquitectura e integración |
+| Carolina Arango Escobar | caro-a21 | CD y Azure |
+| Daniel Felipe Marin Marin | Dazzlm | QA |
+| Tomas Gonzalez Zapata | tomasgonzalez0 | Arquitectura e integración |
 
 El equipo confirmó trabajo conjunto en un mismo PC. Los commits de cada rama llevan el nombre y correo del responsable indicado. Falta registrar revisiones humanas en los PRs y confirmar los nombres completos para la entrega.
 
@@ -25,3 +25,4 @@ Node.js 22, TypeScript, Express, HTML y CSS. Ejecutar `npm ci`, `npm test` y `np
 ## Evidencias
 
 [Acciones pendientes](docs/acciones-pendientes-github.md), [arquitectura](docs/arquitectura.md), [Azure](docs/configuracion-azure.md), [QA](docs/qa.md), [solución de problemas](docs/troubleshooting.md), [guiones de videos](docs/guiones-videos.md) y [evidencias](evidencias/README.md). Enlaces de ejecuciones y videos: pendientes. No se presentan como realizados.
+
