@@ -7,7 +7,7 @@ Aplicación de demostración para GitHub → Azure DevOps CI → artefacto → A
 | Integrante | GitHub | Responsabilidad |
 |---|---|---|
 | Carla Juliana Giraldo Camacho | carlagiraldo09 | Frontend y aplicación |
-| Samuel (apellido pendiente) | samuelcuello05 | CI |
+| Samuel Cristobal Cuello Duque | samuelcuello05 | CI |
 | Carolina Arango Escobar | caro-a21 | CD y Azure |
 | Daniel Felipe Marin Marin | Dazzlm | QA |
 | Tomas Gonzalez Zapata | tomasgonzalez0 | Arquitectura e integración |
