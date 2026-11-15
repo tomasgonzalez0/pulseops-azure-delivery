@@ -20,9 +20,10 @@ Node.js 22, TypeScript, Express, HTML y CSS. Ejecutar `npm ci`, `npm test` y `np
 
 ## Arquitectura y despliegue
 
-`main` activa `azure-pipelines.yml`. CI instala dependencias desde lockfile, compila, prueba y publica `webapp-drop`. CD descarga exactamente ese artefacto y lo despliega en Azure App Service. Requiere registrar pipeline y configurar service connection. App Service creado: [pulseops-itm-2026](https://pulseops-itm-2026.azurewebsites.net) en plan F1; aún no contiene PulseOps verificado.
+`main` activa `azure-pipelines.yml`. CI instala dependencias desde lockfile, compila, prueba y publica `webapp-drop`. CD descarga exactamente ese artefacto y lo despliega en Azure App Service. Pipeline registrada en Azure DevOps; conexión federada configurada. El agente hospedado aún no está disponible. App Service creado: [pulseops-itm-2026](https://pulseops-itm-2026.azurewebsites.net) en plan F1; aún no contiene PulseOps verificado. Véase docs/estado-ejecuciones.md para runs y fallos.
 
 ## Evidencias
 
-[Acciones pendientes](docs/acciones-pendientes-github.md), [arquitectura](docs/arquitectura.md), [Azure](docs/configuracion-azure.md), [QA](docs/qa.md), [solución de problemas](docs/troubleshooting.md), [guiones de videos](docs/guiones-videos.md) y [evidencias](evidencias/README.md). Enlaces de ejecuciones y videos: pendientes. No se presentan como realizados.
+[Acciones pendientes](docs/acciones-pendientes-github.md), [arquitectura](docs/arquitectura.md), [Azure](docs/configuracion-azure.md), [QA](docs/qa.md), [solución de problemas](docs/troubleshooting.md), [guiones de videos](docs/guiones-videos.md) y [evidencias](evidencias/README.md). Ejecuciones fallidas: véase docs/estado-ejecuciones.md. Videos: pendientes. No se presentan como realizados.
+
 
