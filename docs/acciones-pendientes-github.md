@@ -1,9 +1,13 @@
-# Acciones pendientes
+# Acciones pendientes de entrega
 
-1. Confirmar que el pool Azure Pipelines asigna agentes. La organización tiene 1 trabajo hospedado gratuito y 0 compras, pero los runs 2, 3, 5 y 6 fallaron con `No agent found in pool Azure Pipelines`.
-2. Reejecutar la rama de diagnóstico `verify/pipeline-preflight` para probar CI, `webapp-drop` y CD. Esta ejecución manual es de diagnóstico.
-3. Confirmar despliegue Version 1 en https://pulseops-itm-2026.azurewebsites.net y `/api/health` con el SHA de la ejecución.
-4. Crear PR de Version 2, obtener revisión, integrar en `main` y comprobar trigger automático, artefacto, CD, URL y SHA.
-5. Aceptar la invitación pendiente del docente `oalarconpe`; grabar los dos videos narrados con los cinco integrantes; incorporar capturas reales y entregar enlaces y PDF en Teams.
+Los PR #1–#5 y #11–#15 están integrados. El PR [#15](https://github.com/tomasgonzalez0/pulseops-azure-delivery/pull/15) llevó la versión 2 a `main`; el [run automático #15](https://dev.azure.com/carlagiraldo327724/PulseOps/_build/results?buildId=15&view=results) completó CI y CD. No hay un merge técnico pendiente para la demostración.
 
-PRs #1, #2, #3, #4, #5 y #11 están integrados. Los cambios de código y documentación están en `main`.
+| Orden | Acción | Responsable | Enlace | Estado |
+|---|---|---|---|---|
+| 1 | Aceptar la invitación de lectura al repositorio | Docente `oalarconpe` | [Invitaciones GitHub](https://github.com/tomasgonzalez0/pulseops-azure-delivery/invitations) | Invitación pendiente al consultar la API el 15-11-2026. |
+| 2 | Grabar y subir video narrado de CI con los cinco integrantes | Equipo | [Guion CI](guiones-videos.md) | Pendiente. |
+| 3 | Grabar y subir video narrado de CD con los cinco integrantes | Equipo | [Guion CD](guiones-videos.md) | Pendiente. |
+| 4 | Incorporar capturas reales y enlaces de ambos videos a la memoria PDF | Equipo | [Memoria técnica](../output/pdf/memoria-tecnica-pulseops.pdf) | Pendiente de material audiovisual. |
+| 5 | Entregar repositorio, videos y memoria PDF en Microsoft Teams | Equipo | — | Pendiente; no se conoce el enlace de la actividad de Teams. |
+
+Si se agrega un nuevo cambio a `main`, el trigger de `azure-pipelines.yml` inicia CI; CD corre después de CI exitosa y descarga `webapp-drop` de esa misma ejecución. Comprobar el ID de run, el SHA y la respuesta de `/api/health` antes de declarar un nuevo despliegue verificado.
